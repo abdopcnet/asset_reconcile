@@ -9,30 +9,17 @@
     "asset",
     "asset_name",
     "item_code",
-    "item_name",
     "location",
-    "custodian",
-    "status",
     "asset_category",
-    "department",
-    "cost_center",
-    "column_break_1",
     "system_quantity",
+    "system_value",
     "physical_count",
     "variance",
-    "section_break_values",
-    "gross_purchase_amount",
-    "value_after_depreciation",
-    "accumulated_depreciation",
-    "column_break_2",
-    "system_value",
-    "physical_value",
-    "variance_value",
     "notes"
   ],
   "fields": [
     {
-      "columns": 3,
+      "columns": 2,
       "fieldname": "asset",
       "fieldtype": "Link",
       "in_list_view": 1,
@@ -41,7 +28,7 @@
       "reqd": 1
     },
     {
-      "columns": 3,
+      "columns": 2,
       "fetch_from": "asset.asset_name",
       "fieldname": "asset_name",
       "fieldtype": "Data",
@@ -50,7 +37,7 @@
       "read_only": 1
     },
     {
-      "columns": 3,
+      "columns": 2,
       "fetch_from": "asset.item_code",
       "fieldname": "item_code",
       "fieldtype": "Link",
@@ -59,15 +46,7 @@
       "read_only": 1
     },
     {
-      "columns": 3,
-      "fetch_from": "asset.item_name",
-      "fieldname": "item_name",
-      "fieldtype": "Data",
-      "label": "Item Name",
-      "read_only": 1
-    },
-    {
-      "columns": 3,
+      "columns": 1,
       "fetch_from": "asset.location",
       "fieldname": "location",
       "fieldtype": "Link",
@@ -77,25 +56,7 @@
       "read_only": 1
     },
     {
-      "columns": 3,
-      "fetch_from": "asset.custodian",
-      "fieldname": "custodian",
-      "fieldtype": "Link",
-      "label": "Custodian",
-      "options": "Employee",
-      "read_only": 1
-    },
-    {
-      "columns": 2,
-      "fetch_from": "asset.status",
-      "fieldname": "status",
-      "fieldtype": "Data",
-      "in_list_view": 1,
-      "label": "Status",
-      "read_only": 1
-    },
-    {
-      "columns": 2,
+      "columns": 1,
       "fetch_from": "asset.asset_category",
       "fieldname": "asset_category",
       "fieldtype": "Link",
@@ -104,29 +65,7 @@
       "read_only": 1
     },
     {
-      "columns": 2,
-      "fetch_from": "asset.department",
-      "fieldname": "department",
-      "fieldtype": "Link",
-      "label": "Department",
-      "options": "Department",
-      "read_only": 1
-    },
-    {
-      "columns": 2,
-      "fetch_from": "asset.cost_center",
-      "fieldname": "cost_center",
-      "fieldtype": "Link",
-      "label": "Cost Center",
-      "options": "Cost Center",
-      "read_only": 1
-    },
-    {
-      "fieldname": "column_break_1",
-      "fieldtype": "Column Break"
-    },
-    {
-      "columns": 2,
+      "columns": 1,
       "default": "1",
       "fieldname": "system_quantity",
       "fieldtype": "Int",
@@ -135,59 +74,7 @@
       "read_only": 1
     },
     {
-      "columns": 2,
-      "default": "1",
-      "fieldname": "physical_count",
-      "fieldtype": "Int",
-      "in_list_view": 1,
-      "label": "Physical Count"
-    },
-    {
-      "columns": 2,
-      "fieldname": "variance",
-      "fieldtype": "Int",
-      "in_list_view": 1,
-      "label": "Variance",
-      "read_only": 1
-    },
-    {
-      "fieldname": "section_break_values",
-      "fieldtype": "Section Break",
-      "label": "Values"
-    },
-    {
-      "columns": 2,
-      "fetch_from": "asset.gross_purchase_amount",
-      "fieldname": "gross_purchase_amount",
-      "fieldtype": "Currency",
-      "label": "Gross Purchase Amount",
-      "options": "Company:company:default_currency",
-      "read_only": 1
-    },
-    {
-      "columns": 2,
-      "fetch_from": "asset.value_after_depreciation",
-      "fieldname": "value_after_depreciation",
-      "fieldtype": "Currency",
-      "in_list_view": 1,
-      "label": "Value After Depreciation",
-      "options": "Company:company:default_currency",
-      "read_only": 1
-    },
-    {
-      "columns": 2,
-      "fieldname": "accumulated_depreciation",
-      "fieldtype": "Currency",
-      "label": "Accumulated Depreciation",
-      "options": "Company:company:default_currency",
-      "read_only": 1
-    },
-    {
-      "fieldname": "column_break_2",
-      "fieldtype": "Column Break"
-    },
-    {
-      "columns": 2,
+      "columns": 1,
       "fieldname": "system_value",
       "fieldtype": "Currency",
       "label": "System Value",
@@ -195,23 +82,23 @@
       "read_only": 1
     },
     {
-      "columns": 2,
-      "fieldname": "physical_value",
-      "fieldtype": "Currency",
-      "label": "Physical Value",
-      "options": "Company:company:default_currency",
+      "columns": 1,
+      "default": "1",
+      "fieldname": "physical_count",
+      "fieldtype": "Int",
+      "in_list_view": 1,
+      "label": "Physical Count"
+    },
+    {
+      "columns": 1,
+      "fieldname": "variance",
+      "fieldtype": "Int",
+      "in_list_view": 1,
+      "label": "Variance",
       "read_only": 1
     },
     {
-      "columns": 2,
-      "fieldname": "variance_value",
-      "fieldtype": "Currency",
-      "label": "Variance Value",
-      "options": "Company:company:default_currency",
-      "read_only": 1
-    },
-    {
-      "columns": 2,
+      "columns": 1,
       "fieldname": "notes",
       "fieldtype": "Small Text",
       "label": "Notes"
