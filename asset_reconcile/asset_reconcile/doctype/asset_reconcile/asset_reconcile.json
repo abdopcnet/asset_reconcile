@@ -15,11 +15,8 @@
     "counted_by",
     "section_break_filters",
     "location",
-    "set_location",
     "section_break_barcode",
     "scan_barcode",
-    "column_break_2",
-    "scan_mode",
     "section_break_assets",
     "assets",
     "section_break_totals",
@@ -71,11 +68,11 @@
       "reqd": 1
     },
     {
-      "default": "__user__",
       "fieldname": "counted_by",
       "fieldtype": "Link",
       "label": "Counted By",
-      "options": "User"
+      "options": "User",
+      "read_only": 1
     },
     {
       "fieldname": "section_break_filters",
@@ -86,13 +83,8 @@
       "fieldname": "location",
       "fieldtype": "Link",
       "label": "Location",
-      "options": "Location"
-    },
-    {
-      "fieldname": "set_location",
-      "fieldtype": "Link",
-      "label": "Default Location",
-      "options": "Location"
+      "options": "Location",
+      "description": "Filter assets by location when fetching or scanning"
     },
     {
       "depends_on": "eval:!doc.docstatus",
@@ -105,17 +97,6 @@
       "fieldtype": "Data",
       "label": "Scan Barcode",
       "options": "Barcode"
-    },
-    {
-      "fieldname": "column_break_2",
-      "fieldtype": "Column Break"
-    },
-    {
-      "default": "0",
-      "description": "Disables auto-fetching of existing quantity",
-      "fieldname": "scan_mode",
-      "fieldtype": "Check",
-      "label": "Scan Mode"
     },
     {
       "fieldname": "section_break_assets",
