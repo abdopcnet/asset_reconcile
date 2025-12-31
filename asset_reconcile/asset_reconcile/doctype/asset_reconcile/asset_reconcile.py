@@ -94,6 +94,7 @@ def scan_asset_barcode(search_value, company=None, location=None):
                 return {}
             if location and asset.location != location:
                 return {}
+            asset["asset"] = asset.name
             return asset
 
     # 2. Search Asset name directly
@@ -119,6 +120,7 @@ def scan_asset_barcode(search_value, company=None, location=None):
     if asset:
         if company and frappe.db.get_value("Asset", asset.name, "company") != company:
             return {}
+        asset["asset"] = asset.name
         return asset
 
     # 3. Search Item Barcode (if Item has barcode, find Asset by item_code)
@@ -156,6 +158,7 @@ def scan_asset_barcode(search_value, company=None, location=None):
         )
 
         if asset:
+            asset["asset"] = asset.name
             return asset
 
     return {}
