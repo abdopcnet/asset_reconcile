@@ -1,13 +1,20 @@
-### Asset Reconcile
+## Asset Reconcile
 
 ![Version](https://img.shields.io/badge/version-31.12.2025-blue)
 
+Physical asset reconciliation app for ERPNext with barcode scanning support.
 
-Asset Reconcile
+### Features
+
+- **Physical Asset Counting** - Reconcile physical assets against system records
+- **Barcode Scanning** - Fast asset identification via barcode scanner integration
+- **Location-Based Fetch** - Auto-populate assets by location with one click
+- **Variance Tracking** - Calculate and display system vs physical count differences
+- **Real-Time Calculations** - Auto-calculate totals and variance values
+- **Audit Trail** - Track who counted, when, and submission status
+- **Submittable Document** - Full workflow with draft, submit, cancel, amend
 
 ### Installation
-
-You can install this app using the [bench](https://github.com/frappe/bench) CLI:
 
 ```bash
 cd $PATH_TO_YOUR_BENCH
@@ -15,22 +22,14 @@ bench get-app $URL_OF_THIS_REPO --branch develop
 bench install-app asset_reconcile
 ```
 
-### Contributing
+### Quick Start
 
-This app uses `pre-commit` for code formatting and linting. Please [install pre-commit](https://pre-commit.com/#installation) and enable it for this repository:
-
-```bash
-cd apps/asset_reconcile
-pre-commit install
-```
-
-Pre-commit is configured to use the following tools for checking and formatting your code:
-
-- ruff
-- eslint
-- prettier
-- pyupgrade
+1. Navigate to **Asset Reconcile** DocType
+2. Select Company and Location
+3. Click **Fetch Assets from Location** or scan barcodes
+4. Update physical counts
+5. Review variance and submit
 
 ### License
 
-mit
+MIT
