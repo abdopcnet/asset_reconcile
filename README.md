@@ -1,5 +1,8 @@
 ### Asset Reconcile
 
+![Version](https://img.shields.io/badge/version-31.12.2025-blue)
+
+
 Asset Reconcile
 
 ### Installation
