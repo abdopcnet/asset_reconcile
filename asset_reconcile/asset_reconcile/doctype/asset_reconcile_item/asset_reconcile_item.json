@@ -1,0 +1,233 @@
+{
+  "actions": [],
+  "creation": "2025-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "document_type": "Other",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "asset",
+    "asset_name",
+    "item_code",
+    "item_name",
+    "location",
+    "custodian",
+    "status",
+    "asset_category",
+    "department",
+    "cost_center",
+    "column_break_1",
+    "system_quantity",
+    "physical_count",
+    "variance",
+    "section_break_values",
+    "gross_purchase_amount",
+    "value_after_depreciation",
+    "accumulated_depreciation",
+    "column_break_2",
+    "system_value",
+    "physical_value",
+    "variance_value",
+    "notes"
+  ],
+  "fields": [
+    {
+      "columns": 3,
+      "fieldname": "asset",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Asset",
+      "options": "Asset",
+      "reqd": 1
+    },
+    {
+      "columns": 3,
+      "fetch_from": "asset.asset_name",
+      "fieldname": "asset_name",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Asset Name",
+      "read_only": 1
+    },
+    {
+      "columns": 3,
+      "fetch_from": "asset.item_code",
+      "fieldname": "item_code",
+      "fieldtype": "Link",
+      "label": "Item Code",
+      "options": "Item",
+      "read_only": 1
+    },
+    {
+      "columns": 3,
+      "fetch_from": "asset.item_name",
+      "fieldname": "item_name",
+      "fieldtype": "Data",
+      "label": "Item Name",
+      "read_only": 1
+    },
+    {
+      "columns": 3,
+      "fetch_from": "asset.location",
+      "fieldname": "location",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Location",
+      "options": "Location",
+      "read_only": 1
+    },
+    {
+      "columns": 3,
+      "fetch_from": "asset.custodian",
+      "fieldname": "custodian",
+      "fieldtype": "Link",
+      "label": "Custodian",
+      "options": "Employee",
+      "read_only": 1
+    },
+    {
+      "columns": 2,
+      "fetch_from": "asset.status",
+      "fieldname": "status",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Status",
+      "read_only": 1
+    },
+    {
+      "columns": 2,
+      "fetch_from": "asset.asset_category",
+      "fieldname": "asset_category",
+      "fieldtype": "Link",
+      "label": "Asset Category",
+      "options": "Asset Category",
+      "read_only": 1
+    },
+    {
+      "columns": 2,
+      "fetch_from": "asset.department",
+      "fieldname": "department",
+      "fieldtype": "Link",
+      "label": "Department",
+      "options": "Department",
+      "read_only": 1
+    },
+    {
+      "columns": 2,
+      "fetch_from": "asset.cost_center",
+      "fieldname": "cost_center",
+      "fieldtype": "Link",
+      "label": "Cost Center",
+      "options": "Cost Center",
+      "read_only": 1
+    },
+    {
+      "fieldname": "column_break_1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "columns": 2,
+      "default": "1",
+      "fieldname": "system_quantity",
+      "fieldtype": "Int",
+      "in_list_view": 1,
+      "label": "System Quantity",
+      "read_only": 1
+    },
+    {
+      "columns": 2,
+      "default": "1",
+      "fieldname": "physical_count",
+      "fieldtype": "Int",
+      "in_list_view": 1,
+      "label": "Physical Count"
+    },
+    {
+      "columns": 2,
+      "fieldname": "variance",
+      "fieldtype": "Int",
+      "in_list_view": 1,
+      "label": "Variance",
+      "read_only": 1
+    },
+    {
+      "fieldname": "section_break_values",
+      "fieldtype": "Section Break",
+      "label": "Values"
+    },
+    {
+      "columns": 2,
+      "fetch_from": "asset.gross_purchase_amount",
+      "fieldname": "gross_purchase_amount",
+      "fieldtype": "Currency",
+      "label": "Gross Purchase Amount",
+      "options": "Company:company:default_currency",
+      "read_only": 1
+    },
+    {
+      "columns": 2,
+      "fetch_from": "asset.value_after_depreciation",
+      "fieldname": "value_after_depreciation",
+      "fieldtype": "Currency",
+      "in_list_view": 1,
+      "label": "Value After Depreciation",
+      "options": "Company:company:default_currency",
+      "read_only": 1
+    },
+    {
+      "columns": 2,
+      "fieldname": "accumulated_depreciation",
+      "fieldtype": "Currency",
+      "label": "Accumulated Depreciation",
+      "options": "Company:company:default_currency",
+      "read_only": 1
+    },
+    {
+      "fieldname": "column_break_2",
+      "fieldtype": "Column Break"
+    },
+    {
+      "columns": 2,
+      "fieldname": "system_value",
+      "fieldtype": "Currency",
+      "label": "System Value",
+      "options": "Company:company:default_currency",
+      "read_only": 1
+    },
+    {
+      "columns": 2,
+      "fieldname": "physical_value",
+      "fieldtype": "Currency",
+      "label": "Physical Value",
+      "options": "Company:company:default_currency",
+      "read_only": 1
+    },
+    {
+      "columns": 2,
+      "fieldname": "variance_value",
+      "fieldtype": "Currency",
+      "label": "Variance Value",
+      "options": "Company:company:default_currency",
+      "read_only": 1
+    },
+    {
+      "columns": 2,
+      "fieldname": "notes",
+      "fieldtype": "Small Text",
+      "label": "Notes"
+    }
+  ],
+  "istable": 1,
+  "links": [],
+  "modified": "2025-01-01 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Asset Reconcile",
+  "name": "Asset Reconcile Item",
+  "owner": "Administrator",
+  "permissions": [],
+  "quick_entry": 1,
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "states": [],
+  "track_changes": 1
+}

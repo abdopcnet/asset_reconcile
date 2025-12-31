@@ -1,0 +1,217 @@
+{
+  "actions": [],
+  "autoname": "naming_series:",
+  "creation": "2025-01-01 00:00:00.000000",
+  "description": "This tool helps you to perform physical asset counting and reconciliation. It is used to synchronise the system asset records with what actually exists in your locations.",
+  "doctype": "DocType",
+  "document_type": "Document",
+  "engine": "InnoDB",
+  "field_order": [
+    "naming_series",
+    "company",
+    "column_break_1",
+    "reconciliation_date",
+    "reconciliation_time",
+    "counted_by",
+    "section_break_filters",
+    "location",
+    "set_location",
+    "section_break_barcode",
+    "scan_barcode",
+    "column_break_2",
+    "scan_mode",
+    "section_break_assets",
+    "assets",
+    "section_break_totals",
+    "total_system_value",
+    "column_break_3",
+    "total_physical_value",
+    "total_variance_value",
+    "status",
+    "amended_from"
+  ],
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Select",
+      "label": "Series",
+      "no_copy": 1,
+      "options": "ACC-ASR-.YYYY.-",
+      "print_hide": 1,
+      "reqd": 1,
+      "set_only_once": 1
+    },
+    {
+      "fieldname": "company",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Company",
+      "options": "Company",
+      "remember_last_selected_value": 1,
+      "reqd": 1
+    },
+    {
+      "fieldname": "column_break_1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "Today",
+      "fieldname": "reconciliation_date",
+      "fieldtype": "Date",
+      "in_list_view": 1,
+      "label": "Reconciliation Date",
+      "reqd": 1
+    },
+    {
+      "default": "Now",
+      "fieldname": "reconciliation_time",
+      "fieldtype": "Time",
+      "in_list_view": 1,
+      "label": "Reconciliation Time",
+      "reqd": 1
+    },
+    {
+      "default": "__user__",
+      "fieldname": "counted_by",
+      "fieldtype": "Link",
+      "label": "Counted By",
+      "options": "User"
+    },
+    {
+      "fieldname": "section_break_filters",
+      "fieldtype": "Section Break",
+      "label": "Filters"
+    },
+    {
+      "fieldname": "location",
+      "fieldtype": "Link",
+      "label": "Location",
+      "options": "Location"
+    },
+    {
+      "fieldname": "set_location",
+      "fieldtype": "Link",
+      "label": "Default Location",
+      "options": "Location"
+    },
+    {
+      "depends_on": "eval:!doc.docstatus",
+      "fieldname": "section_break_barcode",
+      "fieldtype": "Section Break",
+      "label": "Barcode Scanning"
+    },
+    {
+      "fieldname": "scan_barcode",
+      "fieldtype": "Data",
+      "label": "Scan Barcode",
+      "options": "Barcode"
+    },
+    {
+      "fieldname": "column_break_2",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "0",
+      "description": "Disables auto-fetching of existing quantity",
+      "fieldname": "scan_mode",
+      "fieldtype": "Check",
+      "label": "Scan Mode"
+    },
+    {
+      "fieldname": "section_break_assets",
+      "fieldtype": "Section Break",
+      "label": "Assets"
+    },
+    {
+      "allow_bulk_edit": 1,
+      "fieldname": "assets",
+      "fieldtype": "Table",
+      "label": "Assets",
+      "options": "Asset Reconcile Item",
+      "reqd": 1
+    },
+    {
+      "fieldname": "section_break_totals",
+      "fieldtype": "Section Break",
+      "label": "Totals"
+    },
+    {
+      "fieldname": "total_system_value",
+      "fieldtype": "Currency",
+      "label": "Total System Value",
+      "options": "Company:company:default_currency",
+      "read_only": 1
+    },
+    {
+      "fieldname": "column_break_3",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "total_physical_value",
+      "fieldtype": "Currency",
+      "label": "Total Physical Value",
+      "options": "Company:company:default_currency",
+      "read_only": 1
+    },
+    {
+      "fieldname": "total_variance_value",
+      "fieldtype": "Currency",
+      "label": "Total Variance Value",
+      "options": "Company:company:default_currency",
+      "read_only": 1
+    },
+    {
+      "default": "Draft",
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "\nDraft\nIn Progress\nCompleted\nCancelled"
+    },
+    {
+      "fieldname": "amended_from",
+      "fieldtype": "Link",
+      "ignore_user_permissions": 1,
+      "label": "Amended From",
+      "no_copy": 1,
+      "options": "Asset Reconcile",
+      "print_hide": 1,
+      "read_only": 1
+    }
+  ],
+  "icon": "fa fa-check-square",
+  "idx": 1,
+  "is_submittable": 1,
+  "links": [],
+  "modified": "2025-01-01 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Asset Reconcile",
+  "name": "Asset Reconcile",
+  "naming_rule": "By \"Naming Series\" field",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "amend": 1,
+      "cancel": 1,
+      "create": 1,
+      "delete": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Accounts Manager",
+      "share": 1,
+      "submit": 1,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "read": 1,
+      "role": "Accounts User",
+      "write": 1
+    }
+  ],
+  "row_format": "Dynamic",
+  "search_fields": "reconciliation_date",
+  "show_name_in_global_search": 1,
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "states": []
+}
