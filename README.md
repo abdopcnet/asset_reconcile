@@ -1,35 +1,28 @@
-## Asset Reconcile
+# Asset Reconcile
 
-![Version](https://img.shields.io/badge/version-31.12.2025-blue)
+![Version](https://img.shields.io/badge/version-1.1.2026-blue)
 
-Physical asset reconciliation app for ERPNext with barcode scanning support.
+Physical asset reconciliation with barcode scanning for ERPNext.
 
-### Features
+## Features
 
-- **Physical Asset Counting** - Reconcile physical assets against system records
-- **Barcode Scanning** - Fast asset identification via barcode scanner integration
-- **Location-Based Fetch** - Auto-populate assets by location with one click
-- **Variance Tracking** - Calculate and display system vs physical count differences
-- **Real-Time Calculations** - Auto-calculate totals and variance values
-- **Audit Trail** - Track who counted, when, and submission status
-- **Submittable Document** - Full workflow with draft, submit, cancel, amend
+### Physical Asset Reconciliation
+- Compare physical assets against system records
+- Track system vs physical count variances
+- Calculate variance values (quantity & monetary)
 
-### Installation
+### Barcode Scanning
+- Scan assets via barcode scanner
+- Support for: Asset custom_barcode, Asset name, Item barcode
+- Auto-populate asset details on scan
 
-```bash
-cd $PATH_TO_YOUR_BENCH
-bench get-app $URL_OF_THIS_REPO --branch develop
-bench install-app asset_reconcile
-```
+### Location-Based Operations
+- Fetch all assets by location (one click)
+- Filter assets by company and location
+- Reconcile assets at specific locations
 
-### Quick Start
-
-1. Navigate to **Asset Reconcile** DocType
-2. Select Company and Location
-3. Click **Fetch Assets from Location** or scan barcodes
-4. Update physical counts
-5. Review variance and submit
-
-### License
-
-MIT
+### Automatic Calculations
+- Auto-calculate system values
+- Auto-calculate physical values
+- Calculate variance (quantity & value)
+- Track total variance across all assets
