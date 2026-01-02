@@ -1,6 +1,6 @@
 # Asset Reconcile
 
-![Version](https://img.shields.io/badge/version-1.1.2026-blue)
+![Version](https://img.shields.io/badge/version-2.1.2026-blue)
 
 Physical asset reconciliation with barcode scanning for ERPNext.
 
