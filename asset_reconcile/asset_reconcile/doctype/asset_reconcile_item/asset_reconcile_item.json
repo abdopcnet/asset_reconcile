@@ -1,25 +1,21 @@
 {
  "actions": [],
- "creation": "2025-01-01 00:00:00",
+ "creation": "2026-01-07 01:37:44.094905",
  "doctype": "DocType",
  "document_type": "Other",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "asset",
-  "asset_name",
   "item_code",
   "location",
   "asset_category",
-  "system_quantity",
+  "system_qty",
   "system_value",
-  "value_after_depreciation",
-  "gross_purchase_amount",
-  "physical_qty",
-  "physical_value",
-  "variance",
+  "reconcile_qty",
+  "reconcile_value",
+  "variance_qty",
   "variance_value",
-  "accumulated_depreciation",
   "notes"
  ],
  "fields": [
@@ -34,123 +30,90 @@
   },
   {
    "columns": 2,
-   "fetch_from": "asset.asset_name",
-   "fieldname": "asset_name",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Asset Name",
-   "read_only": 1
-  },
-  {
-   "columns": 2,
-   "fetch_from": "asset.item_code",
    "fieldname": "item_code",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Item Code",
    "options": "Item",
-   "read_only": 1
+   "reqd": 1
   },
   {
    "columns": 1,
-   "fetch_from": "asset.location",
    "fieldname": "location",
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Location",
-   "options": "Location",
-   "read_only": 1
+   "options": "Location"
   },
   {
    "columns": 1,
-   "fetch_from": "asset.asset_category",
    "fieldname": "asset_category",
    "fieldtype": "Link",
-   "label": "Asset Category",
-   "options": "Asset Category",
-   "read_only": 1
-  },
-  {
-   "columns": 1,
-   "default": "1",
-   "fieldname": "system_quantity",
-   "fieldtype": "Int",
    "in_list_view": 1,
-   "label": "System Quantity",
-   "read_only": 1
+   "label": "Asset Category",
+   "options": "Asset Category"
   },
   {
    "columns": 1,
    "fieldname": "system_value",
    "fieldtype": "Currency",
+   "in_list_view": 1,
    "label": "System Value",
    "options": "Company:company:default_currency",
    "read_only": 1
   },
   {
    "columns": 1,
-   "fieldname": "variance",
+   "fieldname": "reconcile_qty",
    "fieldtype": "Int",
    "in_list_view": 1,
-   "label": "Variance QTY",
+   "label": "Reconcile Qty"
+  },
+  {
+   "columns": 1,
+   "fieldname": "reconcile_value",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Reconcile Value",
+   "options": "Company:company:default_currency",
    "read_only": 1
   },
   {
    "columns": 1,
-   "fieldname": "notes",
-   "fieldtype": "Small Text",
-   "label": "Notes"
-  },
-  {
-   "columns": 1,
-   "default": "1",
-   "fieldname": "physical_value",
-   "fieldtype": "Currency",
+   "fieldname": "variance_qty",
+   "fieldtype": "Int",
    "in_list_view": 1,
-   "label": "physical_value",
-   "options": "Company:company:default_currency"
+   "label": "Variance Qty",
+   "read_only": 1
   },
   {
    "columns": 1,
    "fieldname": "variance_value",
    "fieldtype": "Currency",
    "in_list_view": 1,
-   "label": "variance_value",
+   "label": "Variance Value",
    "options": "Company:company:default_currency",
    "read_only": 1
   },
   {
-   "fieldname": "value_after_depreciation",
-   "fieldtype": "Currency",
-   "label": "Value After Depreciation",
-   "options": "Company:company:default_currency"
-  },
-  {
-   "fieldname": "gross_purchase_amount",
-   "fieldtype": "Currency",
-   "label": "Gross Purchase Amount",
-   "options": "Company:company:default_currency"
+   "columns": 1,
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Notes"
   },
   {
    "columns": 1,
-   "default": "1",
-   "fieldname": "physical_qty",
+   "fieldname": "system_qty",
    "fieldtype": "Int",
    "in_list_view": 1,
-   "label": "Physical QTY"
-  },
-  {
-   "columns": 1,
-   "fieldname": "accumulated_depreciation",
-   "fieldtype": "Currency",
-   "in_list_view": 1,
-   "label": "Accumulated Depreciation",
-   "options": "Company:company:default_currency",
+   "label": "System Qty",
    "read_only": 1
   }
  ],
  "istable": 1,
  "links": [],
- "modified": "2026-01-06 20:08:12.916320",
+ "modified": "2026-01-07 02:52:18.852913",
  "modified_by": "Administrator",
  "module": "Asset Reconcile",
  "name": "Asset Reconcile Item",
