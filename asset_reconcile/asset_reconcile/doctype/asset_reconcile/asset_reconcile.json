@@ -1,7 +1,7 @@
 {
  "actions": [],
  "autoname": "naming_series:",
- "creation": "2025-12-31 04:15:37.034673",
+ "creation": "2026-01-07 02:47:46.757249",
  "description": "This tool helps you to perform physical asset counting and reconciliation. It is used to synchronise the system asset records with what actually exists in your locations.",
  "doctype": "DocType",
  "document_type": "Document",
@@ -18,12 +18,19 @@
   "scan_barcode",
   "column_break_vodz",
   "location",
+  "get_assets",
   "section_break_assets",
   "assets",
+  "section_break_slrh",
+  "total_system_qty",
+  "column_break_tlov",
+  "total_reconcile_qty",
+  "column_break_fhfx",
+  "total_variance_qty",
   "section_break_totals",
   "total_system_value",
   "column_break_3",
-  "total_physical_value",
+  "total_reconcile_value",
   "column_break_mqgs",
   "total_variance_value",
   "section_break_knuz",
@@ -83,7 +90,7 @@
    "label": "Filters"
   },
   {
-   "description": "\u0627\u0633\u062a\u0639\u0644\u0627\u0645 \u062d\u0633\u0628 \u0645\u062c\u0645\u0648\u0639\u0629 \u0627\u0644\u0623\u0635\u0648\u0644",
+   "description": "\u0641\u0644\u062a\u0631 \u0645\u062c\u0645\u0648\u0639\u0629 \u0627\u0644\u0623\u0635\u0648\u0644",
    "fieldname": "location",
    "fieldtype": "Link",
    "label": "Location",
@@ -126,13 +133,6 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "total_physical_value",
-   "fieldtype": "Currency",
-   "label": "Total Physical Value",
-   "options": "Company:company:default_currency",
-   "read_only": 1
-  },
-  {
    "fieldname": "total_variance_value",
    "fieldtype": "Currency",
    "label": "Variance Value",
@@ -167,13 +167,55 @@
   {
    "fieldname": "section_break_knuz",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "get_assets",
+   "fieldtype": "Button",
+   "label": "Get Assets"
+  },
+  {
+   "fieldname": "section_break_slrh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_tlov",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_reconcile_qty",
+   "fieldtype": "Data",
+   "label": "Total Reconcile Qty",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_fhfx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_reconcile_value",
+   "fieldtype": "Currency",
+   "label": "Total Reconcile Value",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_variance_qty",
+   "fieldtype": "Data",
+   "label": "Total Variance Qty",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_system_qty",
+   "fieldtype": "Data",
+   "label": "Total System Qty",
+   "read_only": 1
   }
  ],
  "icon": "fa fa-check-square",
  "idx": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-01-06 20:03:24.079490",
+ "modified": "2026-01-07 02:51:40.236977",
  "modified_by": "Administrator",
  "module": "Asset Reconcile",
  "name": "Asset Reconcile",
